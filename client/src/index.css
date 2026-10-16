@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #252421;
+    background-color: #F8F5EF;
+  }
+
+  /* Refined luxury typography defaults */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Subtle luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8AA98;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B69A68;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Luxury hairline borders */
+.border-hairline {
+  border-width: 1px;
+  border-color: rgba(184, 170, 152, 0.28);
+}
+
+.border-hairline-dark {
+  border-width: 1px;
+  border-color: rgba(37, 36, 33, 0.15);
+}
+

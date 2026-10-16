@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: aurelia_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: aurelia_user
+      POSTGRES_PASSWORD: aurelia_secure_password
+      POSTGRES_DB: aurelia_events
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+

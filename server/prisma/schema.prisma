@@ -1,0 +1,157 @@
+// Prisma Schema for Aurelia Atelier Luxury Event Planning
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum InquiryStatus {
+  NEW
+  CONTACTED
+  IN_DISCUSSION
+  CONFIRMED
+  CLOSED
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+model AdminUser {
+  id           String        @id @default(uuid())
+  email        String        @unique
+  passwordHash String
+  fullName     String
+  role         UserRole      @default(ADMIN)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  notes        InquiryNote[]
+
+  @@map("admin_users")
+}
+
+model Inquiry {
+  id               String         @id @default(uuid())
+  fullName         String
+  email            String
+  phone            String?
+  eventType        String
+  preferredDate    String?
+  flexibleDate     Boolean        @default(false)
+  location         String?
+  guestCount       Int?
+  budgetRange      String?
+  preferredContact String         @default("email")
+  vision           String         @db.Text
+  status           InquiryStatus  @default(NEW)
+  internalNotes    InquiryNote[]
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+  @@map("inquiries")
+}
+
+model InquiryNote {
+  id         String    @id @default(uuid())
+  inquiryId  String
+  inquiry    Inquiry   @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+  authorId   String?
+  author     AdminUser? @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  authorName String
+  content    String    @db.Text
+  createdAt  DateTime  @default(now())
+
+  @@index([inquiryId])
+  @@map("inquiry_notes")
+}
+
+model Service {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  title       String
+  subtitle    String?
+  description String   @db.Text
+  highlights  String[] // Array of key luxury offerings
+  imageUrl    String
+  sortOrder   Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+  @@map("services")
+}
+
+model PortfolioProject {
+  id            String   @id @default(uuid())
+  slug          String   @unique
+  title         String
+  category      String   // e.g. "Weddings", "Proposals", "Celebrations", "Corporate"
+  location      String
+  date          String?
+  guestCount    Int?
+  shortDesc     String
+  fullDesc      String   @db.Text
+  coverImage    String
+  galleryImages String[]
+  isFeatured    Boolean  @default(false)
+  isPublished   Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([category])
+  @@index([isFeatured])
+  @@index([sortOrder])
+  @@map("portfolio_projects")
+}
+
+model Testimonial {
+  id          String   @id @default(uuid())
+  clientName  String
+  eventTitle  String
+  eventDate   String?
+  location    String?
+  quote       String   @db.Text
+  rating      Int      @default(5)
+  isPublished Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([sortOrder])
+  @@map("testimonials")
+}
+
+model Faq {
+  id          String   @id @default(uuid())
+  category    String   // e.g. "Consultations", "Investment", "Planning Process", "Destinations"
+  question    String
+  answer      String   @db.Text
+  sortOrder   Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([sortOrder])
+  @@map("faqs")
+}
+
+model BusinessSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String   @db.Text
+  description String?
+  updatedAt   DateTime @updatedAt
+
+  @@map("business_settings")
+}
+
