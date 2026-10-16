@@ -75,8 +75,8 @@ export const App: React.FC = () => {
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/portfolio/:slug" element={<ProjectDetailPage />} />
+          <Route path="/portfolio" element={<Navigate to="/services" replace />} />
+          <Route path="/portfolio/:slug" element={<Navigate to="/services" replace />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/inquire" element={<InquiryPage />} />
           <Route path="/faq" element={<FaqPage />} />

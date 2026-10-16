@@ -1,28 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Heart, Sparkles, Shield, Clock } from 'lucide-react';
-import { fetchPortfolioProjects } from '../services/api.js';
-import { PortfolioProject } from '../types/index.js';
 
 export const HomePage: React.FC = () => {
-  const [featuredProjects, setFeaturedProjects] = useState<PortfolioProject[]>([]);
-  const [loadingProjects, setLoadingProjects] = useState(true);
-
-  useEffect(() => {
-    async function loadPortfolio() {
-      try {
-        const res = await fetchPortfolioProjects();
-        if (res.success && res.data.projects) {
-          setFeaturedProjects(res.data.projects.slice(0, 3));
-        }
-      } catch (err) {
-        console.error('Failed to load portfolio preview:', err);
-      } finally {
-        setLoadingProjects(false);
-      }
-    }
-    loadPortfolio();
-  }, []);
 
   const categories = [
     {
@@ -154,10 +134,10 @@ export const HomePage: React.FC = () => {
               Plan Your Event With Us
             </Link>
             <Link
-              to="/portfolio"
+              to="/services"
               className="w-full sm:w-auto px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/40 backdrop-blur-sm font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 rounded-sm"
             >
-              See Our Recent Work
+              Explore Our Services
             </Link>
           </div>
         </div>
@@ -255,71 +235,6 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Curated Portfolio Preview
-      <section className="bg-luxury-white py-20 border-y border-luxury-taupe/20">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 space-y-10">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="font-sans text-xs uppercase tracking-wider text-luxury-gold font-semibold">
-              Recent Work
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-luxury-charcoal">
-              Weddings & Events We’ve Organized
-            </h2>
-            <p className="font-sans text-xs sm:text-sm text-luxury-charcoal/70">
-              A glimpse into some of our favorite recent celebrations across Sri Lanka.
-            </p>
-          </div>
-
-          {loadingProjects ? (
-            <div className="py-12 text-center text-xs tracking-wider uppercase text-luxury-taupe">
-              Loading recent events...
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredProjects.map((project) => (
-                <Link
-                  key={project.id}
-                  to={`/portfolio/${project.slug}`}
-                  className="group block space-y-3.5"
-                >
-                  <div className="aspect-[4/5] overflow-hidden bg-stone-200 relative shadow-sm rounded-sm">
-                    <img
-                      src={project.coverImage}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-3.5 left-3.5 bg-luxury-charcoal/85 backdrop-blur-sm text-white px-3 py-1 text-[10px] tracking-wider uppercase rounded-sm">
-                      {project.category}
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    <div className="text-[11px] font-sans tracking-wide uppercase text-luxury-taupe font-medium">
-                      {project.location}
-                    </div>
-                    <h3 className="font-serif text-2xl text-luxury-charcoal group-hover:text-luxury-gold transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="font-sans text-xs text-luxury-charcoal/75 line-clamp-2 leading-relaxed">
-                      {project.shortDesc}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          )}
-
-          <div className="text-center pt-4">
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center space-x-2 font-sans text-xs uppercase tracking-wider text-luxury-charcoal border-b border-luxury-charcoal pb-1 hover:text-luxury-gold hover:border-luxury-gold transition-colors font-semibold"
-            >
-              <span>View All Past Events</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
-          </div>
-        </div>
-      </section> */}
 
       {/* 5. What We Bring to Your Day — 6 Steps to a Stress-Free Celebration */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 space-y-12">
