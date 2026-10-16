@@ -15,10 +15,10 @@ export const ServicesPage: React.FC = () => {
       description:
         'From elegant 50th birthday dinners to lively 21st birthday poolside parties, we plan celebrations that bring people together in style. With personalized décor, delicious food, great music, and carefully coordinated entertainment, we take care of every detail so you can focus on celebrating with the people who matter most.',
       highlights: [
-        'Custom theme styling, photobooth backdrops & entrance decor',
-        'Top DJs, live acoustic singers, and professional sound & lighting',
-        'Delicious catering: BBQ stations, Sri Lankan fusion, and cocktail bars',
-        'Private villa, lawn, or boutique hotel reservations',
+        'Personalized themes, photo backdrops, and stylish entrance décor',
+        'DJs, live musicians, professional sound systems, and lighting',
+        'Customized catering, BBQ stations, Sri Lankan fusion menus, and beverage arrangements',
+        'Venue selection, including private villas, garden spaces, and boutique hotels',
       ],
       imageUrl: '/images/birthday.jpeg',
       sortOrder: 1,
@@ -28,14 +28,15 @@ export const ServicesPage: React.FC = () => {
       id: '2',
       slug: 'cliffside-sunset-proposals',
       title: 'Surprise Marriage Proposals',
-      subtitle: 'Romantic setups in complete secrecy',
+      subtitle: 'Beautifully planned. Secretly arranged. Forever remembered.',
       description:
-        'Planning to pop the question? We create magical, intimate proposal settings across Sri Lanka. Imagine a private cliffside overlooking the ocean at sunset with glowing oil lamps, a secluded golden beach dinner under the stars, or an intimate retreat nestled in the misty tea hills. We organize live acoustic music, flowers, photography, and champagne dinners in 100% secrecy.',
+        'Ready to pop the question? We create unforgettable proposal experiences in some of Sri Lanka\'s most romantic settings. Picture a private ocean-view proposal at sunset, a secluded beach dinner beneath the stars, or an intimate escape surrounded by misty tea hills. From romantic décor and fresh flowers to live acoustic music, photography, and private dining, we take care of every detail while keeping your plans discreet.',
       highlights: [
-        'Secret beach, cliffside, and hill country location scouting',
-        'Romantic fairy lights, lantern pathways, and fresh flower arches',
-        'Hidden professional photographer and videographer to capture the moment',
-        'Private candlelit dinner and celebratory champagne or wine',
+        'Scouting romantic beach, ocean-view, and hill-country locations',
+        'Fairy lights, lantern pathways, floral arches, and personalized décor',
+        'Discreet professional photography and videography to capture the special moment',
+        'Private candlelit dinners and customized dining arrangements',
+        'Optional celebratory beverages and personalized finishing touches',
       ],
       imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 2,
@@ -45,14 +46,14 @@ export const ServicesPage: React.FC = () => {
       id: '3',
       slug: 'corporate-summits-brand-retreats',
       title: 'Corporate Functions & Annual Dinner Dances',
-      subtitle: 'Professional, seamless events for top companies and brands',
+      subtitle: 'Professional planning. Flawless execution.',
       description:
-        'Company annual dinner dances, awards nights, corporate cocktail evenings, and product launches organized with precision. We handle LED walls, state-of-the-art stage setups, emcees, live bands, VIP protocol, and catering for 50 to 1,000+ corporate guests.',
+        'From annual dinner dances and awards ceremonies to corporate networking evenings and product launches, we organize business events that leave a lasting impression. We coordinate stage production, LED displays, professional sound and lighting, entertainment, VIP arrangements, and catering to ensure a seamless experience for your team, clients, and guests.',
       highlights: [
-        'Stage, trussing, LED displays, and professional audio/visual production',
-        'Popular Sri Lankan live bands, top DJs, and bilingual emcees',
-        'VIP protocol, registration desk, and corporate gifting solutions',
-        'Venue booking across premier luxury hotel ballrooms and convention halls',
+        'Stage design, trussing, LED displays, sound systems, and professional lighting',
+        'Live bands, DJs, professional entertainment, and bilingual emcees',
+        'VIP guest coordination, registration desks, and customized corporate gifts',
+        'Venue selection, including luxury hotel ballrooms and convention halls',
       ],
       imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 3,
@@ -62,14 +63,14 @@ export const ServicesPage: React.FC = () => {
       id: '4',
       slug: 'anniversaries-bawa-estate-galas',
       title: 'Anniversaries & Family Get-Togethers',
-      subtitle: 'Intimate gatherings honoring family and lifetime milestones',
+      subtitle: 'Meaningful milestones. Moments to cherish.',
       description:
-        'Silver jubilees, golden wedding anniversaries, and family reunions held in elegant colonial villas, lush garden estates, or private family residences. We curate warm, heartfelt evenings with nostalgic photo galleries, customized family menus, classical acoustic music, and personalized guest favors.',
+        'From silver and golden wedding anniversaries to cherished family reunions and intimate celebrations, we plan heartfelt gatherings that bring generations together. Whether hosted in a beautiful garden, a charming heritage villa, or the comfort of your family home, every detail is thoughtfully arranged, from personalized menus and nostalgic photo displays to beautiful décor and entertainment that brings everyone closer.',
       highlights: [
-        'Exclusive access to private heritage homes, garden estates & villas',
-        'Customized family multi-course banquets and traditional sweet tables',
-        'Acoustic violinists, saxophonists, and nostalgic playlist curation',
-        'Full photography and videography for lasting family heirlooms',
+        'Venue selection, from private villas and garden settings to intimate home celebrations',
+        'Customized menus, family-style dining, and traditional Sri Lankan sweet tables',
+        'Live acoustic music, personalized playlists, and entertainment suited to the occasion',
+        'Professional photography, videography, and nostalgic photo displays to preserve precious memories',
       ],
       imageUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 4,
@@ -79,14 +80,14 @@ export const ServicesPage: React.FC = () => {
       id: '5',
       slug: 'bespoke-ceylon-expeditions',
       title: 'Private Beach & Villa Parties',
-      subtitle: 'Custom gatherings tailored to your imagination',
+      subtitle: 'Exceptional settings. Celebrations without limits.',
       description:
-        'Looking for something truly unique? We organize private villa weekend retreats, private catamaran yacht celebrations, luxury safari camping banquets, and scenic hill country bungalow getaways. Tell us your dream and we will bring it to life.',
+        'Looking for something beyond the ordinary? From private villa celebrations and sunset boat trips to beachfront gatherings and scenic hill-country retreats, we plan unique experiences tailored to your vision. With carefully selected venues, personalized décor, exceptional dining, and dedicated coordination, we take care of the details so you can enjoy every moment with your guests.',
       highlights: [
-        'Complete private villa buyouts and luxury seaside estates',
-        'Private catamaran and boat charters for sunset celebrations',
-        'Fresh seafood BBQ grill stations and signature Ceylon cocktail bars',
-        'Dedicated event coordinator on-site throughout your stay',
+        'Private villa bookings, beachfront properties, and exclusive event venues',
+        'Boat charters and sunset cruises for private celebrations, subject to availability',
+        'Seafood BBQs, customized menus, and curated beverage arrangements',
+        'Dedicated event coordination and on-site support throughout your celebration',
       ],
       imageUrl: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 5,
@@ -96,16 +97,16 @@ export const ServicesPage: React.FC = () => {
       id: '6',
       slug: 'destination-weddings-poruwa',
       title: 'Weddings, Poruwa & Homecoming Receptions',
-      subtitle: 'Thoughtful coordination from rituals to evening celebration',
+      subtitle: 'Honouring tradition. Celebrating your love story.',
       description:
-        'Whether you want a traditional Sri Lankan Poruwa ceremony, an elegant church blessing, or a romantic beachfront reception, we handle every detail. From hand-crafted Poruwa structures and fresh Saman Pichcha (jasmine) garlands to traditional Magul Bera drummers and banquet coordination, your day will be stress-free and unforgettable.',
+        'From traditional Sri Lankan Poruwa ceremonies and elegant church weddings to beautiful homecoming receptions and romantic beachfront celebrations, we coordinate every detail with care. From beautifully styled Poruwa structures and fresh Saman Pichcha garlands to traditional Magul Bera drummers, Jayamangala Gatha, and seamless reception arrangements, we bring your celebration together while you enjoy every moment of your special day.',
       highlights: [
-        'Custom Poruwa design, traditional Magul Bera drummers & Jayamangala Gatha',
-        'Stunning floral arrangements (fresh jasmine, lotus, roses & tropical blooms)',
-        'Venue selection & booking across luxury hotel ballrooms, beach villas & heritage estates',
-        'Sound, lighting, DJ / live band setup, and reception coordination',
+        'Customized Poruwa styling, traditional Magul Bera drummers, and Jayamangala Gatha arrangements',
+        'Fresh floral arrangements featuring jasmine, lotus, roses, and tropical blooms',
+        'Venue selection and booking, from hotel ballrooms and beachfront villas to heritage venues',
+        'Professional sound, lighting, DJs, live bands, and reception coordination',
       ],
-      imageUrl: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=85',
+      imageUrl: '/images/wedding.jpeg',
       sortOrder: 6,
       isActive: true,
     },
@@ -222,7 +223,7 @@ export const ServicesPage: React.FC = () => {
           Honest & Transparent Pricing
         </h3>
         <p className="font-sans text-xs sm:text-sm text-luxury-charcoal/80 leading-relaxed max-w-2xl mx-auto">
-          Every event in Sri Lanka is unique in terms of guest count, venue choice, and styling preferences. We provide a clear, itemized quotation with zero hidden markups so you know exactly where every rupee or dollar is invested.
+          Every celebration is unique, with costs shaped by your guest count, venue, décor, and personal preferences. We provide a detailed, itemized quotation tailored to your event, helping you understand your costs clearly, with no unexpected charges or hidden fees.
         </p>
         <div className="pt-2">
           <Link
