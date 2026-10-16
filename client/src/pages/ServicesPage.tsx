@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ArrowRight, Sparkles } from 'lucide-react';
-import { fetchServices } from '../services/api.js';
 import { Service } from '../types/index.js';
 
 export const ServicesPage: React.FC = () => {
-  const [services, setServices] = useState<Service[]>([]);
-  const [loading, setLoading] = useState(true);
 
   // Natural Sri Lankan luxury event offerings
   const defaultServices: Service[] = [
@@ -14,9 +11,9 @@ export const ServicesPage: React.FC = () => {
       id: '1',
       slug: 'milestone-birthdays-island-celebrations',
       title: 'Birthday Parties & Milestone Celebrations',
-      subtitle: 'Memorable 21st, 50th, and milestone celebrations',
+      subtitle: 'Meaningful milestones, unforgettable celebrations',
       description:
-        'Celebrate big birthdays with great music, vibrant decor, and delicious food. Whether you are hosting an intimate 50th birthday dinner for family or an energetic 21st birthday poolside party with a top DJ, we manage the styling, catering, sound systems, bar setup, and entertainment from start to finish.',
+        'From elegant 50th birthday dinners to lively 21st birthday poolside parties, we plan celebrations that bring people together in style. With personalized décor, delicious food, great music, and carefully coordinated entertainment, we take care of every detail so you can focus on celebrating with the people who matter most.',
       highlights: [
         'Custom theme styling, photobooth backdrops & entrance decor',
         'Top DJs, live acoustic singers, and professional sound & lighting',
@@ -114,23 +111,7 @@ export const ServicesPage: React.FC = () => {
     },
   ];
 
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetchServices();
-        if (res.success && res.data.services?.length) {
-          setServices(res.data.services);
-        } else {
-          setServices(defaultServices);
-        }
-      } catch (err) {
-        setServices(defaultServices);
-      } finally {
-        setLoading(false);
-      }
-    }
-    load();
-  }, []);
+  const services = defaultServices;
 
   return (
     <div className="py-16 md:py-24 space-y-20">
@@ -149,12 +130,7 @@ export const ServicesPage: React.FC = () => {
 
       {/* Services List */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 space-y-24">
-        {loading ? (
-          <div className="py-16 text-center text-xs tracking-wider uppercase text-luxury-taupe">
-            Loading services...
-          </div>
-        ) : (
-          services.map((service, index) => {
+        {services.map((service, index) => {
             const isReversed = index % 2 === 1;
             return (
               <div
@@ -236,8 +212,7 @@ export const ServicesPage: React.FC = () => {
                 </div>
               </div>
             );
-          })
-        )}
+          })}
       </section>
 
       {/* Honest Pricing Note */}
