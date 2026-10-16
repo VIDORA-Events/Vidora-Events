@@ -6,21 +6,22 @@ async function main() {
   console.log('\nSeeding VIDORA EVENTS SRI LANKA database with authentic Sri Lankan events...');
 
   // 1. Services
-  console.log('Seeding Sri Lanka services...');
+  console.log('Clearing old services and seeding Sri Lanka services...');
+  await prisma.service.deleteMany({});
   const services = [
     {
-      slug: 'destination-weddings-poruwa',
-      title: 'Weddings, Poruwa & Homecoming Receptions',
-      subtitle: 'Complete coordination from morning traditions to midnight dancing',
+      slug: 'milestone-birthdays-island-celebrations',
+      title: 'Birthday Parties & Milestone Celebrations',
+      subtitle: 'Memorable 21st, 50th, and milestone celebrations',
       description:
-        'Whether you want a traditional Sri Lankan Poruwa ceremony, an elegant church wedding, or a romantic beachfront reception, we handle every detail. From hand-crafted Poruwa structures and fresh Saman Pichcha (jasmine) garlands to traditional Magul Bera drummers and full banquet coordination, your wedding will be stress-free and unforgettable.',
+        'Celebrate big birthdays with great music, vibrant decor, and delicious food. Whether you are hosting an intimate 50th birthday dinner for family or an energetic 21st birthday poolside party with a top DJ, we manage the styling, catering, sound systems, bar setup, and entertainment from start to finish.',
       highlights: [
-        'Custom Poruwa design, traditional Magul Bera drummers & Jayamangala Gatha',
-        'Stunning floral arrangements (fresh jasmine, lotus, roses & tropical blooms)',
-        'Venue selection & booking across luxury hotel ballrooms, beach villas & heritage estates',
-        'Sound, lighting, DJ / live band setup, and reception coordination',
+        'Custom theme styling, photobooth backdrops & entrance decor',
+        'Top DJs, live acoustic singers, and professional sound & lighting',
+        'Delicious catering: BBQ stations, Sri Lankan fusion, and cocktail bars',
+        'Private villa, lawn, or boutique hotel reservations',
       ],
-      imageUrl: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=85',
+      imageUrl: '/images/birthday.jpeg',
       sortOrder: 1,
       isActive: true,
     },
@@ -41,18 +42,18 @@ async function main() {
       isActive: true,
     },
     {
-      slug: 'milestone-birthdays-island-celebrations',
-      title: 'Birthday Parties & Milestone Celebrations',
-      subtitle: 'Memorable 21st, 50th, and milestone celebrations',
+      slug: 'corporate-summits-brand-retreats',
+      title: 'Corporate Functions & Annual Dinner Dances',
+      subtitle: 'Professional, seamless events for top companies and brands',
       description:
-        'Celebrate big birthdays with great music, vibrant decor, and delicious food. Whether you are hosting an intimate 50th birthday dinner for family or an energetic 21st birthday poolside party with a top DJ, we manage the styling, catering, sound systems, bar setup, and entertainment from start to finish.',
+        'Company annual dinner dances, awards nights, corporate cocktail evenings, and product launches organized with precision. We handle LED walls, state-of-the-art stage setups, emcees, live bands, VIP protocol, and catering for 50 to 1,000+ corporate guests.',
       highlights: [
-        'Custom theme styling, photobooth backdrops & entrance decor',
-        'Top DJs, live acoustic singers, and professional sound & lighting',
-        'Delicious catering: BBQ stations, Sri Lankan fusion, and cocktail bars',
-        'Private villa, lawn, or boutique hotel reservations',
+        'Stage, trussing, LED displays, and professional audio/visual production',
+        'Popular Sri Lankan live bands, top DJs, and bilingual emcees',
+        'VIP protocol, registration desk, and corporate gifting solutions',
+        'Venue booking across premier luxury hotel ballrooms and convention halls',
       ],
-      imageUrl: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1600&q=85',
+      imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 3,
       isActive: true,
     },
@@ -73,22 +74,6 @@ async function main() {
       isActive: true,
     },
     {
-      slug: 'corporate-summits-brand-retreats',
-      title: 'Corporate Functions & Annual Dinner Dances',
-      subtitle: 'Professional, seamless events for top companies and brands',
-      description:
-        'Company annual dinner dances, awards nights, corporate cocktail evenings, and product launches organized with precision. We handle LED walls, state-of-the-art stage setups, emcees, live bands, VIP protocol, and catering for 50 to 1,000+ corporate guests.',
-      highlights: [
-        'Stage, trussing, LED displays, and professional audio/visual production',
-        'Popular Sri Lankan live bands, top DJs, and bilingual emcees',
-        'VIP protocol, registration desk, and corporate gifting solutions',
-        'Venue booking across premier luxury hotel ballrooms and convention halls',
-      ],
-      imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=85',
-      sortOrder: 5,
-      isActive: true,
-    },
-    {
       slug: 'bespoke-ceylon-expeditions',
       title: 'Private Beach & Villa Parties',
       subtitle: 'Custom gatherings tailored to your imagination',
@@ -101,21 +86,36 @@ async function main() {
         'Dedicated event coordinator on-site throughout your stay',
       ],
       imageUrl: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1600&q=85',
+      sortOrder: 5,
+      isActive: true,
+    },
+    {
+      slug: 'destination-weddings-poruwa',
+      title: 'Weddings, Poruwa & Homecoming Receptions',
+      subtitle: 'Complete coordination from morning traditions to midnight dancing',
+      description:
+        'Whether you want a traditional Sri Lankan Poruwa ceremony, an elegant church wedding, or a romantic beachfront reception, we handle every detail. From hand-crafted Poruwa structures and fresh Saman Pichcha (jasmine) garlands to traditional Magul Bera drummers and full banquet coordination, your wedding will be stress-free and unforgettable.',
+      highlights: [
+        'Custom Poruwa design, traditional Magul Bera drummers & Jayamangala Gatha',
+        'Stunning floral arrangements (fresh jasmine, lotus, roses & tropical blooms)',
+        'Venue selection & booking across luxury hotel ballrooms, beach villas & heritage estates',
+        'Sound, lighting, DJ / live band setup, and reception coordination',
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=85',
       sortOrder: 6,
       isActive: true,
     },
   ];
 
   for (const s of services) {
-    await prisma.service.upsert({
-      where: { slug: s.slug },
-      update: s,
-      create: s,
+    await prisma.service.create({
+      data: s,
     });
   }
 
   // 2. Portfolio Projects
-  console.log('Seeding Sri Lanka portfolio projects...');
+  console.log('Clearing old portfolio projects and seeding Sri Lanka portfolio projects...');
+  await prisma.portfolioProject.deleteMany();
   const projects = [
     {
       slug: 'galle-fort-dutch-colonial-wedding',
@@ -232,10 +232,8 @@ async function main() {
   ];
 
   for (const p of projects) {
-    await prisma.portfolioProject.upsert({
-      where: { slug: p.slug },
-      update: p,
-      create: p,
+    await prisma.portfolioProject.create({
+      data: p,
     });
   }
 

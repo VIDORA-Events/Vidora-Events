@@ -190,10 +190,10 @@ describe('VIDORA Events Sri Lanka — API Endpoints & Security Tests', () => {
       (prisma.portfolioProject.findMany as any).mockResolvedValue([
         {
           id: 'proj-1',
-          slug: 'villa-balbiano-lake-como',
-          title: 'Villa Balbiano',
+          slug: 'galle-fort-dutch-colonial-wedding',
+          title: 'Dilshan & Nimara’s Wedding at Galle Fort',
           category: 'Weddings',
-          coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552',
+          coverImage: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62',
           isPublished: true,
         },
       ]);
