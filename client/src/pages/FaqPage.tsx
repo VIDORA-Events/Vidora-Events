@@ -36,7 +36,7 @@ export const FaqPage: React.FC = () => {
       category: 'Budgets & Fees',
       question: 'How do your planning fees and payments work?',
       answer:
-        'We do not push rigid, overpriced packages. We charge a fair, transparent planning fee to manage your event from start to finish. All hotel bookings, catering, florists, and band fees are billed transparently with zero hidden markups. You can make payments conveniently in Sri Lankan Rupees (LKR) via direct bank transfer or cash.',
+        'Every event is different, so our planning fees are tailored to the services, scale, and requirements of your occasion. We provide a clear quotation outlining our planning fees and estimated event expenses before you confirm your booking. Where applicable, vendor costs are itemized separately so you can understand where your budget is going. Payments can be made in Sri Lankan Rupees (LKR) through agreed payment methods, including bank transfers or cash.',
       sortOrder: 4,
     },
     {
@@ -44,7 +44,7 @@ export const FaqPage: React.FC = () => {
       category: 'Vendors & Bands',
       question: 'Can we bring our own photographers, DJ, or live band?',
       answer:
-        'Yes, of course! You are free to bring in your own favorite vendors. If you need recommendations, we also connect you with Sri Lanka’s top wedding photographers, videographers, popular live bands, and DJs who we know and trust for reliable quality.',
+        'Absolutely! You are welcome to work with photographers, DJs, live bands, and other vendors of your choice. If you\'d like recommendations, we can also help you explore suitable vendors for your event, style, and budget, subject to availability.',
       sortOrder: 5,
     },
     {
@@ -52,7 +52,7 @@ export const FaqPage: React.FC = () => {
       category: 'Booking Timeline',
       question: 'How far in advance should we start planning?',
       answer:
-        'For peak wedding seasons in Sri Lanka (December, January, February, August), popular hotels and venues get reserved 6 to 12 months in advance. For birthday parties, marriage proposals, or corporate dinners, we can organize everything smoothly on 3 to 6 weeks’ notice.',
+        'We recommend starting as early as possible, especially for weddings and celebrations during popular dates when venues and vendors can book up quickly. For larger weddings, planning 6–12 months ahead is ideal. Birthdays, proposals, and corporate events may be arranged within a shorter timeframe, depending on the event\'s requirements and vendor availability. Whatever the occasion, we\'ll help you plan a realistic timeline.',
       sortOrder: 6,
     },
   ];
@@ -129,7 +129,7 @@ export const FaqPage: React.FC = () => {
             Have a question about your upcoming event?
           </h3>
           <p className="font-sans text-xs sm:text-sm text-luxury-charcoal/75 max-w-xl mx-auto leading-relaxed">
-            Give us a quick call or message us on WhatsApp. Our friendly event coordinators are always happy to answer your questions.
+            We’re here to help! Give us a call or send us a message on WhatsApp. Our team will be happy to answer your questions, discuss your ideas, and help you take the first step towards planning your special occasion.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
