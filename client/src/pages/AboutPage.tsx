@@ -200,10 +200,10 @@ At Vidora Events, we believe every celebration deserves to be extraordinary. We 
       <section className="max-w-4xl mx-auto px-6 text-center space-y-5">
         <Sparkles className="w-6 h-6 text-luxury-gold mx-auto" />
         <h2 className="font-serif text-3xl sm:text-4xl text-luxury-charcoal">
-          Let’s start planning your special occasion.
+          Let’s Plan Something Unforgettable.
         </h2>
         <p className="font-sans text-xs sm:text-sm text-luxury-charcoal/75 max-w-xl mx-auto leading-relaxed">
-          Whether you have a clear plan or just a date in mind, we would love to talk and see how we can help.
+          Whether you have every detail in mind or are just beginning to dream about your special occasion, we’re here to help. Tell us your vision, and let’s bring it to life with thoughtful planning and personal care.
         </p>
         <div className="pt-2">
           <Link
