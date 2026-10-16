@@ -27,25 +27,25 @@ export const HomePage: React.FC = () => {
   const categories = [
     {
       title: 'Birthdays & Milestone Celebrations',
-      description: 'Big 21st birthdays, 50th milestone parties, silver anniversaries, and private family dinners with great food, vibrant decor, and live entertainment.',
+      description: 'From milestone birthdays and silver anniversaries to intimate family dinners, we create unforgettable celebrations with beautiful décor, exceptional dining, and entertainment tailored to your style.',
       image: '/images/birthday.jpeg',
       link: '/services#celebrations',
     },
     {
       title: 'Surprise Marriage Proposals',
-      description: 'Dreamy candlelit setups on coastal cliffs, private beach dinners under the stars, acoustic musicians, and romantic moments organized in 100% secrecy.',
+      description: 'From dreamy candlelit settings and private beach dinners under the stars to acoustic music and thoughtful details, we create unforgettable proposal experiences while keeping every surprise a secret.',
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
       link: '/services#proposals',
     },
     {
       title: 'Corporate Functions & Annual Galas',
-      description: 'Company annual dinner dances, awards nights, product launches, and brand conferences organized smoothly with complete A/V and stage production.',
+      description: 'From annual dinners and awards ceremonies to product launches and brand conferences, we deliver seamless corporate events with professional sound, lighting, and stage production.',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
       link: '/services#corporate',
     },
     {
       title: 'Weddings & Poruwa Ceremonies',
-      description: 'Grand Poruwa rituals, church ceremonies, and lively dinner dances at premier hotels, beachfront villas, and heritage estates.',
+      description: 'From traditional Poruwa ceremonies and elegant church weddings to grand receptions, we bring your vision to life with thoughtful styling and beautiful venues, from luxury hotels to beachfront villas and heritage estates.',
       image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
       link: '/services#weddings',
     },
@@ -55,44 +55,44 @@ export const HomePage: React.FC = () => {
     {
       number: '01',
       title: 'Vision & Theme',
-      subtitle: 'Crafting your unique celebration aesthetic',
+      subtitle: 'Your vision, thoughtfully brought to life.',
       description:
-        'We begin by getting to know your celebration vision, occasion, and personal style. Whether you are throwing a milestone birthday party, planning an unforgettable sunset proposal, hosting a corporate gala, or organizing a wedding, we define a cohesive concept tailored just for you.',
+        'We start by understanding your occasion, ideas, and personal style. Whether you are planning a milestone birthday, a romantic sunset proposal, a corporate gala, or a wedding, we develop a cohesive concept that reflects your vision.',
     },
     {
       number: '02',
       title: 'Budget & Timeline',
-      subtitle: 'Clear planning with zero surprises',
+      subtitle: 'Clear planning, every step of the way.',
       description:
-        'No hidden markups or sudden expenses. We build an honest, itemized budget and a clear preparation timeline so you always know what is coming next, whether you are paying in LKR or foreign currency.',
+        'We create a detailed budget and a practical planning timeline tailored to your needs. With transparent cost breakdowns and clear communication, you will know what to expect at every stage, whether you are paying in Sri Lankan rupees or foreign currency.',
     },
     {
       number: '03',
       title: 'Vendor Curation',
-      subtitle: 'Sri Lanka’s finest, hand-selected for you',
+      subtitle: 'The right people to make it happen.',
       description:
-        'We connect you with Sri Lanka’s most trusted venues, renowned photographers, DJs, top live bands, decorators, master drummers, and caterers that match your exact style and budget.',
+        'We help you find suitable venues and trusted event professionals, from photographers, DJs, and live bands to decorators, caterers, and traditional drummers. Every recommendation is guided by your style, requirements, and budget.',
     },
     {
       number: '04',
       title: 'Design & Styling',
-      subtitle: 'Every little detail intentionally crafted',
+      subtitle: 'Every detail, beautifully considered.',
       description:
-        'From custom backdrops, ambient lighting, and floral styling to entrance arches, dessert tables, and personalized stationery, we transform spaces into breathtaking celebration settings.',
+        'From bespoke backdrops, atmospheric lighting, and floral arrangements to elegant entrance displays, dessert tables, and personalized stationery, we bring your event concept to life with thoughtful styling and attention to detail.',
     },
     {
       number: '05',
-      title: 'Coordination',
-      subtitle: 'Seamless multi-vendor orchestration',
+      title: 'Planning & Coordination',
+      subtitle: 'Everything working together seamlessly.',
       description:
-        'We manage all vendor coordination, schedules, and floorplans so everything aligns smoothly. For clients living locally or overseas, we handle time-zone-friendly WhatsApp updates and regular check-ins.',
+        'We coordinate vendors, schedules, logistics, and event layouts to keep everything on track. For clients planning from overseas, we provide convenient WhatsApp updates and scheduled check-ins to keep communication simple across time zones.',
     },
     {
       number: '06',
-      title: 'Day-Of Management',
-      subtitle: 'We run the show, you enjoy the moment',
+      title: 'Event-Day Management',
+      subtitle: 'You enjoy the moment. We handle the details.',
       description:
-        'On your big day, our dedicated coordinators are on-site from early morning until the last song ends. We manage timings, cues, guests, and vendors behind the scenes so you and your family can simply celebrate.',
+        'On the day, we oversee the schedule, vendor arrivals, key moments, and on-site coordination. Our goal is to keep everything running smoothly behind the scenes, so you and your loved ones can focus on celebrating.',
     },
   ];
 
@@ -132,10 +132,10 @@ export const HomePage: React.FC = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6 pt-10">
-          <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-luxury-white text-xs tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-luxury-gold" />
-            <span>Sri Lanka’s Bespoke Event Curators & Planners</span>
-          </div>
+          {/* <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-luxury-white text-xs tracking-wider uppercase"> */}
+            {/* <Sparkles className="w-3.5 h-3.5 text-luxury-gold" /> */}
+            {/* <span>Sri Lanka’s Bespoke Event Curators & Planners</span> */}
+          {/* </div> */}
 
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-normal text-white leading-[1.15]">
             Unforgettable Celebrations & <br />
@@ -174,7 +174,7 @@ export const HomePage: React.FC = () => {
         </h2>
         <div className="w-16 h-[2px] bg-luxury-gold mx-auto"></div>
         <p className="font-sans text-sm sm:text-base text-luxury-charcoal/80 max-w-3xl mx-auto leading-relaxed">
-          Planning a birthday party, surprise proposal, company annual dinner, or special celebration in Sri Lanka should be an exciting time with the people you love, not weeks of exhausting stress. Whether you live locally or are organizing an event from overseas, our dedicated team manages everything smoothly.
+          Planning a birthday party, surprise proposal, corporate dinner, or special celebration should be an exciting experience, not weeks of stressful planning. Whether you're in Sri Lanka or organizing an event from overseas, our dedicated team takes care of every detail to make your event seamless and memorable.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-left">
@@ -182,21 +182,21 @@ export const HomePage: React.FC = () => {
             <Shield className="w-5 h-5 text-luxury-gold" />
             <h3 className="font-serif text-xl text-luxury-charcoal">Zero Stress for You</h3>
             <p className="font-sans text-xs text-luxury-charcoal/70 leading-relaxed">
-              We coordinate all vendors, decorators, sounds, caterers, and venues. You and your family can just relax and enjoy.
+              We coordinate every detail, from vendors, decorators, and caterers to sound and lighting and venue arrangements. You and your loved ones can simply relax and enjoy the celebration.
             </p>
           </div>
           <div className="p-6 bg-luxury-white border border-luxury-taupe/20 rounded-sm space-y-2.5">
             <Heart className="w-5 h-5 text-luxury-gold" />
             <h3 className="font-serif text-xl text-luxury-charcoal">Custom to Your Style</h3>
             <p className="font-sans text-xs text-luxury-charcoal/70 leading-relaxed">
-              Every Poruwa, stage backdrop, and floral setup is customized for you—whether you want a traditional look or modern chic.
+              Every Poruwa ceremony, stage backdrop, and floral arrangement is thoughtfully designed around your vision, whether you prefer timeless tradition or modern elegance.
             </p>
           </div>
           <div className="p-6 bg-luxury-white border border-luxury-taupe/20 rounded-sm space-y-2.5">
             <Clock className="w-5 h-5 text-luxury-gold" />
             <h3 className="font-serif text-xl text-luxury-charcoal">All Across the Island</h3>
             <p className="font-sans text-xs text-luxury-charcoal/70 leading-relaxed">
-              From premier hotel ballrooms to private beachfront villas, heritage estates, and scenic hill-country bungalows.
+              From luxury hotel ballrooms and private beachfront villas to heritage estates and scenic hill-country retreats, we bring your dream event to life anywhere in Sri Lanka.
             </p>
           </div>
         </div>
@@ -255,7 +255,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. Curated Portfolio Preview */}
+      {/* 4. Curated Portfolio Preview
       <section className="bg-luxury-white py-20 border-y border-luxury-taupe/20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -319,7 +319,7 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 5. What We Bring to Your Day — 6 Steps to a Stress-Free Celebration */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 space-y-12">
@@ -365,7 +365,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. Client Reviews */}
+      {/* 6. Client Reviews
       <section className="max-w-6xl mx-auto px-6 sm:px-8 space-y-10">
         <div className="text-center space-y-2">
           <span className="font-sans text-xs uppercase tracking-wider text-luxury-gold font-semibold">
@@ -396,7 +396,7 @@ export const HomePage: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 7. Call To Action Banner */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8">
@@ -409,7 +409,7 @@ export const HomePage: React.FC = () => {
               Let’s Plan Your Big Day Together.
             </h2>
             <p className="font-sans text-xs sm:text-sm text-luxury-ivory/80 leading-relaxed font-light">
-              We would love to hear your ideas. Send us an inquiry or message us on WhatsApp to set up a friendly conversation.
+             Every unforgettable celebration starts with an idea. Tell us what you have in mind, and let’s bring it to life. Send us an inquiry or reach out on WhatsApp to start planning your special occasion with us.
             </p>
             <div className="pt-3">
               <Link

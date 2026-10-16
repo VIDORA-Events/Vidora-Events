@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
               <Logo variant="light" size="md" subtitle="LUXURY EVENTS &bull; SRI LANKA" />
             </Link>
             <p className="font-serif text-luxury-ivory/85 text-base sm:text-lg max-w-sm leading-relaxed">
-              We design and manage beautiful weddings, Poruwa ceremonies, proposals, and private parties all across Sri Lanka with warmth, care, and attention to every single detail.
+              We plan and coordinate beautiful weddings, Poruwa ceremonies, surprise proposals, and private celebrations across Sri Lanka, bringing every vision to life with care, creativity, and attention to detail.
             </p>
             <div className="pt-1 text-xs font-sans tracking-wide text-luxury-taupe">
               Bespoke Celebrations &bull; Islandwide Planning &bull; Sri Lanka
@@ -58,23 +58,23 @@ export const Footer: React.FC = () => {
           {/* Contact Details */}
           <div className="md:col-span-3 space-y-3.5">
             <h4 className="font-sans text-xs uppercase tracking-wider text-luxury-gold font-semibold">
-              Contact & Locations
+              Contact 
             </h4>
             <div className="space-y-2.5 text-xs font-sans text-luxury-ivory/80">
-              <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-luxury-gold shrink-0 mt-0.5" />
-                <span>
+              {/* <div className="flex items-start space-x-2"> */}
+                {/* <MapPin className="w-4 h-4 text-luxury-gold shrink-0 mt-0.5" /> */}
+                {/* <span>
                   <strong>Colombo Office:</strong><br />
                   Ward Place, Cinnamon Gardens, Colombo 07
-                </span>
-              </div>
-              <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-luxury-gold shrink-0 mt-0.5" />
-                <span>
+                </span> */}
+              {/* </div> */}
+              {/* <div className="flex items-start space-x-2"> */}
+                {/* <MapPin className="w-4 h-4 text-luxury-gold shrink-0 mt-0.5" /> */}
+                {/* <span>
                   <strong>Galle Office:</strong><br />
                   Church Street, Galle Fort
-                </span>
-              </div>
+                </span> */}
+              {/* </div> */}
               <div className="flex items-center space-x-2 pt-1">
                 <Phone className="w-4 h-4 text-luxury-gold shrink-0" />
                 <span>
@@ -142,8 +142,8 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} VIDORA Events (Pvt) Ltd. Sri Lanka.
           </div>
           <div className="flex space-x-5">
-            <span>Privacy Policy</span>
-            <span>Terms & Conditions</span>
+            {/* <span>Privacy Policy</span>
+            <span>Terms & Conditions</span> */}
           </div>
         </div>
       </div>

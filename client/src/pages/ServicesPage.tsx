@@ -140,10 +140,10 @@ export const ServicesPage: React.FC = () => {
           Our Services
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl text-luxury-charcoal">
-          Events We Organize
+          Every Occasion, Beautifully Planned.
         </h1>
         <p className="font-sans text-sm sm:text-base text-luxury-charcoal/75 max-w-2xl mx-auto leading-relaxed">
-          From birthday parties, surprise proposals, and corporate functions to intimate family celebrations and bespoke weddings across Sri Lanka.
+          From milestone birthdays and romantic proposals to corporate galas, intimate gatherings, and bespoke weddings, we bring your vision to life with thoughtful planning and attention to detail across Sri Lanka.
         </p>
       </section>
 

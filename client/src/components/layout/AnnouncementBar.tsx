@@ -13,7 +13,7 @@ export const AnnouncementBar: React.FC = () => {
         <div className="flex-1 text-center flex items-center justify-center space-x-2">
           <Sparkles className="w-3.5 h-3.5 text-luxury-gold shrink-0" />
           <span>
-            Now taking bookings for 2025 & 2026 weddings and events across Sri Lanka.{' '}
+            Now taking bookings for 2026 & 2027 events across Sri Lanka.{' '}
             <Link
               to="/inquire"
               className="text-luxury-gold underline hover:text-white transition-colors ml-1 font-medium"
