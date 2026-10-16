@@ -1,45 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Sparkles, ArrowRight, Phone } from 'lucide-react';
-import { fetchFaqs } from '../services/api.js';
 import { Faq } from '../types/index.js';
 
 export const FaqPage: React.FC = () => {
-  const [faqs, setFaqs] = useState<Faq[]>([]);
   const [openId, setOpenId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
 
   const defaultFaqs: Faq[] = [
-    {
-      id: 'f1',
-      category: 'Planning From Overseas',
-      question: 'Can you plan our wedding if we live abroad (Australia, UK, Canada, Dubai)?',
-      answer:
-        'Yes, absolutely! More than half of our couples live overseas. We coordinate everything around your time zone via WhatsApp, voice notes, and Zoom calls. We send you photo and video updates of venues and decor options, and if your parents or relatives are in Sri Lanka, we happily meet them in person to finalize details smoothly.',
-      sortOrder: 1,
-    },
-    {
-      id: 'f2',
-      category: 'Traditions & Rituals',
-      question: 'Do you arrange traditional Poruwa ceremonies as well as church weddings?',
-      answer:
-        'Yes, we manage traditional Sinhala Poruwa ceremonies, Tamil Hindu weddings, Christian church weddings, and civil registrations. For Poruwa ceremonies, we provide custom wooden Poruwas decorated with fresh Saman Pichcha (jasmine) and lotus flowers, coordinated traditional Magul Bera drummers, Kandyan dancers, Jayamangala Gatha, and Ashtaka reciters.',
-      sortOrder: 2,
-    },
-    {
-      id: 'f3',
-      category: 'Best Months & Monsoons',
-      question: 'When is the best time for beach and outdoor weddings in Sri Lanka?',
-      answer:
-        'The best weather for beach and outdoor coastal celebrations is from December to late April, offering sunny skies, calm waters, and dry evening breezes. If you are planning an event during other months, we recommend climate-controlled luxury ballrooms or scenic hill-country estates.',
-      sortOrder: 3,
-    },
+    // {
+    //   id: 'f1',
+    //   category: 'Planning From Overseas',
+    //   question: 'Can you plan our wedding if we live abroad (Australia, UK, Canada, Dubai)?',
+    //   answer:
+    //     'Yes, absolutely! More than half of our couples live overseas. We coordinate everything around your time zone via WhatsApp, voice notes, and Zoom calls. We send you photo and video updates of venues and decor options, and if your parents or relatives are in Sri Lanka, we happily meet them in person to finalize details smoothly.',
+    //   sortOrder: 1,
+    // },
+    // {
+    //   id: 'f2',
+    //   category: 'Traditions & Rituals',
+    //   question: 'Do you arrange traditional Poruwa ceremonies as well as church weddings?',
+    //   answer:
+    //     'Yes, we manage traditional Sinhala Poruwa ceremonies, Tamil Hindu weddings, Christian church weddings, and civil registrations. For Poruwa ceremonies, we provide custom wooden Poruwas decorated with fresh Saman Pichcha (jasmine) and lotus flowers, coordinated traditional Magul Bera drummers, Kandyan dancers, Jayamangala Gatha, and Ashtaka reciters.',
+    //   sortOrder: 2,
+    // },
+    // {
+    //   id: 'f3',
+    //   category: 'Best Months & Monsoons',
+    //   question: 'When is the best time for beach and outdoor weddings in Sri Lanka?',
+    //   answer:
+    //     'The best weather for beach and outdoor coastal celebrations is from December to late April, offering sunny skies, calm waters, and dry evening breezes. If you are planning an event during other months, we recommend climate-controlled luxury ballrooms or scenic hill-country estates.',
+    //   sortOrder: 3,
+    // },
     {
       id: 'f4',
       category: 'Budgets & Fees',
       question: 'How do your planning fees and payments work?',
       answer:
-        'We do not push rigid, overpriced packages. We charge a fair, transparent planning fee to manage your event from start to finish. All hotel bookings, catering, florists, and band fees are billed transparently with zero hidden markups. You can make payments conveniently in Sri Lankan Rupees (LKR) or foreign currency (USD, AUD, GBP, EUR) via direct bank transfer or card.',
+        'We do not push rigid, overpriced packages. We charge a fair, transparent planning fee to manage your event from start to finish. All hotel bookings, catering, florists, and band fees are billed transparently with zero hidden markups. You can make payments conveniently in Sri Lankan Rupees (LKR) via direct bank transfer or cash.',
       sortOrder: 4,
     },
     {
@@ -60,23 +57,7 @@ export const FaqPage: React.FC = () => {
     },
   ];
 
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetchFaqs();
-        if (res.success && res.data.faqs?.length) {
-          setFaqs(res.data.faqs);
-        } else {
-          setFaqs(defaultFaqs);
-        }
-      } catch (err) {
-        setFaqs(defaultFaqs);
-      } finally {
-        setLoading(false);
-      }
-    }
-    load();
-  }, []);
+  const faqs = defaultFaqs;
 
   const toggleAccordion = (id: string) => {
     setOpenId(openId === id ? null : id);
