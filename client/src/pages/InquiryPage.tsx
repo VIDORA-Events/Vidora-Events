@@ -26,7 +26,21 @@ const inquiryFormSchema = z.object({
     .min(2, 'Please select what kind of event you are planning.'),
   preferredDate: z
     .string()
-    .optional(),
+    .optional()
+    .refine(
+      (val) => {
+        if (!val) return true;
+        const now = new Date();
+        const yyyy = now.getFullYear();
+        const mm = String(now.getMonth() + 1).padStart(2, '0');
+        const dd = String(now.getDate()).padStart(2, '0');
+        const todayStr = `${yyyy}-${mm}-${dd}`;
+        return val >= todayStr;
+      },
+      {
+        message: 'Please select today or a future date for your event.',
+      }
+    ),
   flexibleDate: z.boolean().default(false),
   location: z
     .string()
@@ -204,7 +218,7 @@ export const InquiryPage: React.FC = () => {
           Plan Your Event With Us
         </h1>
         <p className="font-sans text-sm sm:text-base text-luxury-charcoal/75 max-w-xl mx-auto leading-relaxed">
-          Tell us about your upcoming wedding, proposal, party, or function. We will get back to you quickly with helpful advice and ideas.
+          Tell us about your upcoming wedding, proposal, party, or function. Our team will be in touch to discuss your vision and help you explore the possibilities.
         </p>
       </section>
 
@@ -262,7 +276,7 @@ export const InquiryPage: React.FC = () => {
                   <input
                     type="tel"
                     {...register('phone')}
-                    placeholder="e.g. +94 77 123 4567 or +61 412 345 678"
+                    placeholder="e.g. +94 77 123 4567 "
                     className="w-full px-3.5 py-2.5 bg-luxury-ivory/50 border border-luxury-taupe/30 text-luxury-charcoal text-xs rounded-sm focus:outline-none focus:border-luxury-charcoal"
                   />
                   {errors.phone && (
@@ -334,7 +348,7 @@ export const InquiryPage: React.FC = () => {
                     <option value="Western Province (Hotels & Venues)">Western Province (Hotels & Venues)</option>
                     <option value="Southern Coastal Belt (Beachfront Villas & Resorts)">Southern Coastal Belt (Beachfront Villas & Resorts)</option>
                     <option value="Central & Hill Country (Tea Estates & Mountain Retreats)">Central & Hill Country (Tea Estates & Mountain Retreats)</option>
-                    <option value="North-Western & Cultural Triangle">North-Western & Cultural Triangle</option>
+                    {/* <option value="North-Western & Cultural Triangle">North-Western & Cultural Triangle</option> */}
                     <option value="Private Family Residence / Villa">Private Family Residence / Villa</option>
                     <option value="Not Decided Yet / Open for Suggestions">Not Decided Yet / Open for Suggestions</option>
                   </select>
@@ -346,9 +360,19 @@ export const InquiryPage: React.FC = () => {
                   </label>
                   <input
                     type="date"
+                    min={(() => {
+                      const now = new Date();
+                      const yyyy = now.getFullYear();
+                      const mm = String(now.getMonth() + 1).padStart(2, '0');
+                      const dd = String(now.getDate()).padStart(2, '0');
+                      return `${yyyy}-${mm}-${dd}`;
+                    })()}
                     {...register('preferredDate')}
                     className="w-full px-3.5 py-2.5 bg-luxury-ivory/50 border border-luxury-taupe/30 text-luxury-charcoal text-xs rounded-sm focus:outline-none focus:border-luxury-charcoal"
                   />
+                  {errors.preferredDate && (
+                    <p className="text-red-600 text-[11px] mt-1">{errors.preferredDate.message}</p>
+                  )}
                   <div className="pt-1.5">
                     <label className="flex items-center space-x-2 text-xs text-stone-600 cursor-pointer">
                       <input
@@ -383,9 +407,9 @@ export const InquiryPage: React.FC = () => {
                     <label className="block text-xs font-sans uppercase tracking-wider text-luxury-charcoal font-semibold">
                       Your Budget Range
                     </label>
-                    <span className="text-[11px] text-luxury-taupe font-sans">
+                    {/* <span className="text-[11px] text-luxury-taupe font-sans">
                       Maximum budget is optional
-                    </span>
+                    </span> */}
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
@@ -451,7 +475,7 @@ export const InquiryPage: React.FC = () => {
                 <textarea
                   rows={4}
                   {...register('vision')}
-                  placeholder="Tell us what you have in mind: e.g. looking for a beach hotel in Bentota, need a traditional Poruwa with jasmine flowers, live band suggestions, or catering requirements..."
+                  placeholder="Tell us what you have in mind: e.g. looking for a beach hotel in Bentota..."
                   className="w-full px-3.5 py-2.5 bg-luxury-ivory/50 border border-luxury-taupe/30 text-luxury-charcoal text-xs rounded-sm focus:outline-none focus:border-luxury-charcoal leading-relaxed"
                 ></textarea>
                 {errors.vision && (
@@ -470,7 +494,8 @@ export const InquiryPage: React.FC = () => {
                   className="mt-0.5 rounded border-stone-300 text-stone-900"
                 />
                 <label htmlFor="privacyConsent" className="text-xs text-stone-700 leading-relaxed cursor-pointer">
-                  Yes, please have a VIDORA event planner contact me via WhatsApp or email regarding this event. We keep all your details strictly private.
+                  Yes, please have a VIDORA event planner contact me via WhatsApp or email regarding this event.
+                  <p>Your information will be handled with care and used to respond to your event inquiry in accordance with our privacy policy.</p>
                 </label>
               </div>
               {errors.privacyConsent && (

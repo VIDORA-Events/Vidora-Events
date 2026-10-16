@@ -22,7 +22,21 @@ export const createInquirySchema = z.object({
   preferredDate: z
     .string()
     .optional()
-    .or(z.literal('')),
+    .or(z.literal(''))
+    .refine(
+      (val) => {
+        if (!val) return true;
+        const now = new Date();
+        const yyyy = now.getFullYear();
+        const mm = String(now.getMonth() + 1).padStart(2, '0');
+        const dd = String(now.getDate()).padStart(2, '0');
+        const todayStr = `${yyyy}-${mm}-${dd}`;
+        return val >= todayStr;
+      },
+      {
+        message: 'Event date must be today or a future date.',
+      }
+    ),
   flexibleDate: z.boolean().default(false),
   location: z
     .string()

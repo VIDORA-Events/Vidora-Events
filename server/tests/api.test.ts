@@ -81,9 +81,9 @@ describe('VIDORA Events Sri Lanka — API Endpoints & Security Tests', () => {
     it('successfully processes valid inquiry submission and stores in database', async () => {
       const mockInquiry = {
         id: 'inq-12345',
-        fullName: 'Genevieve Dupond',
-        email: 'genevieve@example.com',
-        eventType: 'Weddings & Engagements',
+        fullName: 'Kavinda Perera',
+        email: 'kavinda@example.com',
+        eventType: 'Weddings, Poruwa & Homecoming Receptions',
         createdAt: new Date().toISOString(),
       };
 
@@ -92,23 +92,23 @@ describe('VIDORA Events Sri Lanka — API Endpoints & Security Tests', () => {
       const res = await request(app)
         .post('/api/inquiries')
         .send({
-          fullName: 'Genevieve Dupond',
-          email: 'genevieve@example.com',
-          phone: '+33 6 12 34 56 78',
-          eventType: 'Weddings & Engagements',
-          preferredDate: '2025-09-20',
+          fullName: 'Kavinda Perera',
+          email: 'kavinda@example.com',
+          phone: '+94 77 123 4567',
+          eventType: 'Weddings, Poruwa & Homecoming Receptions',
+          preferredDate: '2027-12-15',
           flexibleDate: true,
-          location: 'Lake Como, Italy',
-          guestCount: 120,
-          budgetRange: '$100k-$250k',
-          preferredContact: 'email',
-          vision: 'A three-day candlelit neoclassical gathering with couture floristry and Lake Como private Riva transfers.',
+          location: 'Bentota, Sri Lanka',
+          guestCount: 150,
+          budgetRange: 'LKR 2,000,000+',
+          preferredContact: 'phone',
+          vision: 'A beautiful beach wedding with Poruwa ceremony and live band dinner dance.',
         });
 
       expect(res.status).toBe(201);
       expect(res.body.success).toBe(true);
       expect(res.body.data.inquiryId).toBe('inq-12345');
-      expect(res.body.data.fullName).toBe('Genevieve Dupond');
+      expect(res.body.data.fullName).toBe('Kavinda Perera');
     });
   });
 
