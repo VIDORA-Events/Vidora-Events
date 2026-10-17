@@ -74,18 +74,18 @@ export const Footer: React.FC = () => {
                 <Phone className="w-4 h-4 text-luxury-gold shrink-0" />
                 <span>
                   <strong>Hotline / WhatsApp:</strong><br />
-                  <a href="tel:+94771234567" className="hover:text-luxury-white underline">
-                    +94 77 123 4567
-                  </a> / +94 11 268 9400
+                  <a href="tel:+94 77 536 4603" className="hover:text-luxury-white underline">
+                   +94 77 536 4603
+                   </a>
                 </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-luxury-gold shrink-0" />
                 <a
-                  href="mailto:hello@vidoraevents.lk"
+                  href="mailto:vidoraevents@gmail.com"
                   className="hover:text-luxury-gold transition-colors underline"
                 >
-                  hello@vidoraevents.lk
+                  vidoraevents@gmail.com
                 </a>
               </div>
             </div>

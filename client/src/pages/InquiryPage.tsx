@@ -143,7 +143,7 @@ export const InquiryPage: React.FC = () => {
     } catch (err: any) {
       console.error('Inquiry submission error:', err);
       setServerError(
-        err.message || 'We could not submit your details right now. Please call or WhatsApp us on +94 77 123 4567.'
+        err.message || 'We could not submit your details right now. Please call or WhatsApp us on +94 77 536 4603.'
       );
     } finally {
       setIsSubmitting(false);

@@ -68,7 +68,7 @@ At Vidora Events, we believe every celebration deserves to be extraordinary. We 
           <div className="lg:col-span-6">
             <div className="aspect-[4/5] overflow-hidden bg-stone-200 shadow-md rounded-sm">
               <img
-                src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=85"
+                src="/images/image.avif"
                 alt="Sri Lankan celebration dinner table with ambient candles and florals"
                 className="w-full h-full object-cover"
               />

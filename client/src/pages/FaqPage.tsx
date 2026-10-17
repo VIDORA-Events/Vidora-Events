@@ -137,7 +137,7 @@ export const FaqPage: React.FC = () => {
               className="inline-flex items-center space-x-2 px-6 py-3 bg-luxury-charcoal text-luxury-ivory hover:bg-black font-sans text-xs tracking-wider uppercase transition-all duration-200 font-semibold rounded-sm"
             >
               <Phone className="w-3.5 h-3.5 text-luxury-gold" />
-              <span>Call / WhatsApp: +94 77 123 4567</span>
+              <span>Call / WhatsApp: +94 77 536 4603</span>
             </a>
             <Link
               to="/inquire"

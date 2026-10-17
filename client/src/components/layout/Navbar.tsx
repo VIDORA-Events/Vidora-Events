@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center space-x-1.5 text-xs text-luxury-charcoal hover:text-luxury-gold transition-colors font-medium"
           >
             <Phone className="w-3.5 h-3.5 text-luxury-gold" />
-            <span>+94 77 123 4567</span>
+            <span>+94 77 536 4603</span>
           </a>
           <Link
             to="/inquire"
@@ -143,7 +143,7 @@ export const Navbar: React.FC = () => {
               className="flex items-center space-x-2 text-xs font-sans text-luxury-charcoal font-medium"
             >
               <Phone className="w-4 h-4 text-luxury-gold" />
-              <span>Call / WhatsApp: +94 77 123 4567</span>
+              <span>Call / WhatsApp: +94 77 536 4603</span>
             </a>
             <Link
               to="/inquire"

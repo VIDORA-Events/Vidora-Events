@@ -340,7 +340,7 @@ async function main() {
   const settings = [
     { key: 'brand_name', value: 'VIDORA EVENTS SRI LANKA', description: 'Brand Name' },
     { key: 'tagline', value: 'Making Your Special Day Unforgettable.', description: 'Brand Tagline' },
-    { key: 'concierge_email', value: 'hello@vidoraevents.lk', description: 'Customer Inquiries Email' },
+    { key: 'concierge_email', value: 'vidoraevents@gmail.com', description: 'Customer Inquiries Email' },
     { key: 'concierge_phone', value: '+94 77 123 4567', description: 'Hotline / WhatsApp' },
     { key: 'atelier_address', value: 'Ward Place, Cinnamon Gardens, Colombo 07, Sri Lanka', description: 'Colombo Office' },
     { key: 'southern_pavilion', value: 'Church Street, Galle Fort, Sri Lanka', description: 'Galle Office' },

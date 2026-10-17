@@ -28,7 +28,7 @@ A production-ready, full-stack luxury wedding and event planning web application
 ## 1. Project Overview & Sri Lankan Features
 
 ### Public Website
-- **Warm, Elegant Home Page:** Features popular Sri Lankan event categories (Poruwa ceremonies, homecomings, surprise beach proposals, birthday parties, corporate dinner dances), easy 4-step planning process, real client feedback, and direct WhatsApp hotline (`+94 77 123 4567`).
+- **Warm, Elegant Home Page:** Features popular Sri Lankan event categories (Poruwa ceremonies, homecomings, surprise beach proposals, birthday parties, corporate dinner dances), easy 4-step planning process, real client feedback, and direct WhatsApp hotline (`+94 77 536 4603`).
 - **Relatable Services:**
   1. *Weddings, Poruwa & Homecoming Receptions:* Custom Poruwa design, traditional Magul Bera drummers, Jayamangala Gatha, fresh jasmine & lotus floristry, reception band & DJ coordination.
   2. *Surprise Marriage Proposals:* Secret beach setups in Weligama & Bentota with traditional brass oil lamps (pāna), private candlelight dinner, and hidden photographers.
@@ -162,5 +162,5 @@ npm run test --workspace=client
 
 - **Colombo Office:** Ward Place, Cinnamon Gardens, Colombo 07
 - **Galle Office:** Church Street, Galle Fort
-- **Hotline / WhatsApp:** `+94 77 123 4567` / `+94 11 268 9400`
-- **Email:** `hello@aureliaevents.lk`
+- **Hotline / WhatsApp:** `+94 77 536 4603`
+- **Email:** `vidoraevents@gmail.com`
