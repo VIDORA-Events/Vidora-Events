@@ -38,7 +38,7 @@ export const ServicesPage: React.FC = () => {
         'Private candlelit dinners and customized dining arrangements',
         'Optional celebratory beverages and personalized finishing touches',
       ],
-      imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85',
+      imageUrl: '/images/proposal.jpeg',
       sortOrder: 2,
       isActive: true,
     },

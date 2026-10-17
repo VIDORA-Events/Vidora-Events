@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
     {
       title: 'Surprise Marriage Proposals',
       description: 'From dreamy candlelit settings and private beach dinners under the stars to acoustic music and thoughtful details, we create unforgettable proposal experiences while keeping every surprise a secret.',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/proposal.jpeg',
       link: '/services#proposals',
     },
     {
@@ -26,7 +26,7 @@ export const HomePage: React.FC = () => {
     {
       title: 'Weddings & Poruwa Ceremonies',
       description: 'From traditional Poruwa ceremonies and elegant church weddings to grand receptions, we bring your vision to life with thoughtful styling and beautiful venues, from luxury hotels to beachfront villas and heritage estates.',
-      image: 'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/wedding.jpeg',
       link: '/services#weddings',
     },
   ];
