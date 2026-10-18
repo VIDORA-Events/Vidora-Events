@@ -79,7 +79,7 @@ export async function createPortfolioProject(req: Request, res: Response, next: 
     const validatedData = portfolioProjectSchema.parse(req.body);
 
     const project = await prisma.portfolioProject.create({
-      data: validatedData,
+      data: validatedData as any,
     });
 
     res.status(201).json({
