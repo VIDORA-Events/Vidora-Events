@@ -206,13 +206,16 @@ At Vidora Events, we believe every celebration deserves to be extraordinary. We 
           Whether you have every detail in mind or are just beginning to dream about your special occasion, we’re here to help. Tell us your vision, and let’s bring it to life with thoughtful planning and personal care.
         </p>
         <div className="pt-2">
-          <Link
-            to="/inquire"
+          {/* <Link to="/inquire">Message Our Team</Link> commented for direct WhatsApp */}
+          <a
+            href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20plan%20an%20event%20with%20your%20team."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center space-x-2 px-8 py-3.5 bg-luxury-charcoal text-luxury-ivory hover:bg-black font-sans text-xs tracking-wider uppercase transition-all duration-200 font-semibold rounded-sm"
           >
-            <span>Message Our Team</span>
+            <span>Message Our Team on WhatsApp</span>
             <ArrowRight className="w-3.5 h-3.5 text-luxury-gold" />
-          </Link>
+          </a>
         </div>
       </section>
     </div>

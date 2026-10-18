@@ -127,15 +127,18 @@ export const HomePage: React.FC = () => {
           </p>
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/inquire"
-              className="w-full sm:w-auto px-8 py-4 bg-luxury-gold hover:bg-luxury-gold-dark text-white font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 shadow-md rounded-sm"
+            {/* <Link to="/inquire">Plan Your Event With Us</Link> commented for direct WhatsApp */}
+            <a
+              href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20plan%20an%20event%20with%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-luxury-gold hover:bg-luxury-gold-dark text-white font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 shadow-md rounded-sm text-center"
             >
-              Plan Your Event With Us
-            </Link>
+              Plan Your Event (WhatsApp)
+            </a>
             <Link
               to="/services"
-              className="w-full sm:w-auto px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/40 backdrop-blur-sm font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 rounded-sm"
+              className="w-full sm:w-auto px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/40 backdrop-blur-sm font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 rounded-sm text-center"
             >
               Explore Our Services
             </Link>
@@ -327,12 +330,15 @@ export const HomePage: React.FC = () => {
              Every unforgettable celebration starts with an idea. Tell us what you have in mind, and let’s bring it to life. Send us an inquiry or reach out on WhatsApp to start planning your special occasion with us.
             </p>
             <div className="pt-3">
-              <Link
-                to="/inquire"
+              {/* <Link to="/inquire">Inquire For Your Date</Link> commented for direct WhatsApp */}
+              <a
+                href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20inquire%20about%20availability%20for%20my%20event."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-9 py-3.5 bg-luxury-gold hover:bg-luxury-gold-dark text-white font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-200 shadow-md rounded-sm"
               >
-                Inquire For Your Date
-              </Link>
+                Inquire on WhatsApp
+              </a>
             </div>
           </div>
         </div>

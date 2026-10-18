@@ -43,9 +43,15 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/inquire" className="hover:text-luxury-white transition-colors">
-                  Plan Your Event
-                </Link>
+                {/* <Link to="/inquire">Plan Your Event</Link> commented for direct WhatsApp */}
+                <a
+                  href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20inquire%20about%20planning%20an%20event."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-luxury-white transition-colors"
+                >
+                  WhatsApp Inquiries
+                </a>
               </li>
             </ul>
           </div>
@@ -119,14 +125,14 @@ export const Footer: React.FC = () => {
                   <ArrowUpRight className="w-3 h-3 text-luxury-taupe" />
                 </a>
               </li>
-              <li className="pt-3">
+              {/* <li className="pt-3">
                 <Link
                   to="/admin/login"
                   className="text-[11px] text-luxury-taupe hover:text-luxury-gold uppercase tracking-wider block transition-colors"
                 >
                   Staff Portal &rarr;
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

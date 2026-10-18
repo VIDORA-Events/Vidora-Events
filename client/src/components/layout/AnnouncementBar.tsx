@@ -14,12 +14,15 @@ export const AnnouncementBar: React.FC = () => {
           <Sparkles className="w-3.5 h-3.5 text-luxury-gold shrink-0" />
           <span>
             Now taking bookings for 2026 & 2027 events across Sri Lanka.{' '}
-            <Link
-              to="/inquire"
+            {/* <Link to="/inquire">Get in touch with us &rarr;</Link> commented for direct WhatsApp */}
+            <a
+              href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20inquire%20about%20planning%20an%20event."
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-luxury-gold underline hover:text-white transition-colors ml-1 font-medium"
             >
-              Get in touch with us &rarr;
-            </Link>
+              WhatsApp us &rarr;
+            </a>
           </span>
         </div>
         <button

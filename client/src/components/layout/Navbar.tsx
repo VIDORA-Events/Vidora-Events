@@ -86,18 +86,23 @@ export const Navbar: React.FC = () => {
         {/* Primary CTA and Hotline */}
         <div className="hidden md:flex items-center space-x-5">
           <a
-            href="tel:+94771234567"
+            href="https://wa.me/94775364603"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center space-x-1.5 text-xs text-luxury-charcoal hover:text-luxury-gold transition-colors font-medium"
           >
             <Phone className="w-3.5 h-3.5 text-luxury-gold" />
             <span>+94 77 536 4603</span>
           </a>
-          <Link
-            to="/inquire"
+          {/* <Link to="/inquire">Plan Your Event</Link> commented for direct WhatsApp */}
+          <a
+            href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20inquire%20about%20planning%20an%20event."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center font-sans tracking-wider uppercase text-xs px-6 py-2.5 bg-luxury-charcoal text-luxury-ivory hover:bg-black transition-all duration-200 shadow-sm rounded-sm"
           >
-            Plan Your Event
-          </Link>
+            WhatsApp Us
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -139,18 +144,23 @@ export const Navbar: React.FC = () => {
 
           <div className="pt-4 border-t border-luxury-taupe/20 space-y-3">
             <a
-              href="tel:+94771234567"
+              href="https://wa.me/94775364603"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center space-x-2 text-xs font-sans text-luxury-charcoal font-medium"
             >
               <Phone className="w-4 h-4 text-luxury-gold" />
               <span>Call / WhatsApp: +94 77 536 4603</span>
             </a>
-            <Link
-              to="/inquire"
+            {/* <Link to="/inquire">Plan Your Event</Link> commented for direct WhatsApp */}
+            <a
+              href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20inquire%20about%20planning%20an%20event."
+              target="_blank"
+              rel="noopener noreferrer"
               className="block w-full text-center font-sans tracking-wider uppercase text-xs px-6 py-3.5 bg-luxury-charcoal text-luxury-ivory rounded-sm"
             >
-              Plan Your Event
-            </Link>
+              WhatsApp Us
+            </a>
           </div>
         </div>
       )}

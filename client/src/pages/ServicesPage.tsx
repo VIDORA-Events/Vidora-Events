@@ -201,7 +201,7 @@ export const ServicesPage: React.FC = () => {
                     </div>
                   )}
 
-                  <div className="pt-3">
+                  {/* <div className="pt-3">
                     <Link
                       to={`/inquire?type=${encodeURIComponent(service.title)}`}
                       className="inline-flex items-center space-x-2 px-6 py-3 bg-luxury-charcoal text-luxury-ivory hover:bg-black font-sans text-xs tracking-wider uppercase transition-all duration-200 shadow-sm rounded-sm font-semibold"
@@ -209,7 +209,7 @@ export const ServicesPage: React.FC = () => {
                       <span>Inquire for {service.title}</span>
                       <ArrowRight className="w-3.5 h-3.5 text-luxury-gold" />
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             );
@@ -226,12 +226,15 @@ export const ServicesPage: React.FC = () => {
           Every celebration is unique, with costs shaped by your guest count, venue, décor, and personal preferences. We provide a detailed, itemized quotation tailored to your event, helping you understand your costs clearly, with no unexpected charges or hidden fees.
         </p>
         <div className="pt-2">
-          <Link
-            to="/inquire"
+          {/* <Link to="/inquire">Get a Free Custom Quote</Link> commented for direct WhatsApp */}
+          <a
+            href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20would%20like%20to%20get%20a%20quote%20for%20an%20event."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-xs font-sans uppercase tracking-wider text-luxury-gold hover:text-luxury-charcoal underline underline-offset-4 font-semibold"
           >
-            Get a Free Custom Quote &rarr;
-          </Link>
+            Get a Free Custom Quote on WhatsApp &rarr;
+          </a>
         </div>
       </section>
     </div>

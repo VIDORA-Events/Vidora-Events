@@ -133,19 +133,15 @@ export const FaqPage: React.FC = () => {
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
-              href="tel:+94771234567"
+              href="https://wa.me/94775364603?text=Hello%20VIDORA%20Events,%20I%20have%20a%20question%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-6 py-3 bg-luxury-charcoal text-luxury-ivory hover:bg-black font-sans text-xs tracking-wider uppercase transition-all duration-200 font-semibold rounded-sm"
             >
               <Phone className="w-3.5 h-3.5 text-luxury-gold" />
               <span>Call / WhatsApp: +94 77 536 4603</span>
             </a>
-            <Link
-              to="/inquire"
-              className="inline-flex items-center space-x-2 px-6 py-3 border border-luxury-charcoal text-luxury-charcoal hover:bg-luxury-charcoal hover:text-white font-sans text-xs tracking-wider uppercase transition-all duration-200 font-semibold rounded-sm"
-            >
-              <span>Send Online Inquiry</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            {/* <Link to="/inquire" className="...">Send Online Inquiry</Link> commented for direct WhatsApp */}
           </div>
         </div>
       </section>
