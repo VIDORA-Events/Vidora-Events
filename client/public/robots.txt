@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block admin routes from indexing
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /admin/portfolio
+
+# Sitemap location
+Sitemap: https://vidora-events-g6ja.vercel.app/sitemap.xml
+
