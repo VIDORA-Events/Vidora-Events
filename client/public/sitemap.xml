@@ -3,7 +3,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://vidora-events-g6ja.vercel.app/</loc>
+    <loc>https://vidora-events.vercel.app/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
 
   <!-- Services Page -->
   <url>
-    <loc>https://vidora-events-g6ja.vercel.app/services</loc>
+    <loc>https://vidora-events.vercel.app/services</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -27,7 +27,7 @@
 
   <!-- FAQ Page -->
   <url>
-    <loc>https://vidora-events-g6ja.vercel.app/faq</loc>
+    <loc>https://vidora-events.vercel.app/faq</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
